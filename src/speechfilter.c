@@ -1,7 +1,7 @@
 #include "speechfilter.h"
 
 struct obs_source_info speechfilter = {
-	.id = "cleanstream_audio_filter",
+	.id = "speechfilter_audio_filter",
 	.type = OBS_SOURCE_TYPE_FILTER,
 	.output_flags = OBS_SOURCE_AUDIO,
 	.get_name = speechfilter_getname,
