@@ -12,4 +12,5 @@ struct obs_source_info speechfilter = {
 	.update = speechfilter_on_update,
 	.activate = speechfilter_activate,
 	.deactivate = speechfilter_deactivate,
+	.filter_audio = speechfilter_filter_audio
 };

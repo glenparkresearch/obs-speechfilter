@@ -54,3 +54,23 @@ void speechfilter_deactivate(void *data) {
     (void)data;  // Suppress unused parameter warning
     // Code to execute when the filter is deactivated
 }
+
+struct obs_audio_data *speechfilter_filter_audio(void *data, struct obs_audio_data *audio) {
+    (void)data;
+    for (int c = 0; c < 8; ++c) {
+        for (uint32_t i = 0; i < audio->frames; ++i) {
+            audio->data[c][i] = 0;
+        }
+    }
+    return audio;
+};
+
+
+
+
+
+
+
+
+
+
