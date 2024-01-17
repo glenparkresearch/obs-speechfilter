@@ -12,7 +12,7 @@ void *speechfilter_on_create(obs_data_t *settings, obs_source_t *source) {
     (void)source;    // Suppress unused parameter warning
     // Initialize and return filter data
     // Replace 'nullptr' with actual data initialization
-    return nullptr; 
+    return malloc(1); 
 }
 
 // Function called when the filter is destroyed
