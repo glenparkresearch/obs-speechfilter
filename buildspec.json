@@ -36,11 +36,11 @@
             "bundleId": "com.example.obs-plugintemplate"
         }
     },
-    "name": "obs-plugintemplate",
-    "displayName": "OBS Plugin Template",
+    "name": "obs-speechfilter",
+    "displayName": "OBS Speech Filter",
     "version": "1.0.0",
-    "author": "Your Name Here",
-    "website": "https://example.com",
+    "author": "Glen Park Research",
+    "website": "https://github.com/glenparkresearch",
     "email": "me@example.com",
     "uuids": {
         "windowsApp": "00000000-0000-0000-0000-000000000000"
