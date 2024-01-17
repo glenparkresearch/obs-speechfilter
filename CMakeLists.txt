@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.16...3.26)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/common/bootstrap.cmake" NO_POLICY_SCOPE)
 
 project(${_name} VERSION ${_version})
@@ -33,6 +35,7 @@ if(ENABLE_QT)
                AUTOUIC ON
                AUTORCC ON)
 endif()
+
 
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE src/plugin-main.c)
 
