@@ -1,4 +1,7 @@
 #include "speechfilter.h"
+#include "plugin-support.h"
+#include <libobs/media-io/audio-io.h>
+#include <libobs/obs.h>
 
 // Function to return the name of the filter
 const char *speechfilter_getname(void *unused_data) {
@@ -57,11 +60,16 @@ void speechfilter_deactivate(void *data) {
 
 struct obs_audio_data *speechfilter_filter_audio(void *data, struct obs_audio_data *audio) {
     (void)data;
-    for (int c = 0; c < 8; ++c) {
+    obs_log(LOG_INFO, "speechfilter_filter_audio()");
+    size_t channels = audio_output_get_channels(obs_get_audio());
+    obs_log(LOG_INFO, "speechfilter_filter_audio() # of channels: %i", channels);
+    float **adata = (float **)audio->data;
+    for (size_t c = 0; c < channels; ++c) {
         for (uint32_t i = 0; i < audio->frames; ++i) {
-            audio->data[c][i] = 0;
+            adata[c][i] = .0f;
         }
     }
+    obs_log(LOG_INFO, "speechfilter_filter_audio() finished");
     return audio;
 };
 
