@@ -15,7 +15,7 @@ obs_properties_t *speechfilter_get_properties(void *data);
 void speechfilter_on_update(void *data, obs_data_t *settings);
 void speechfilter_activate(void *data);
 void speechfilter_deactivate(void *data);
-
+struct obs_audio_data *speechfilter_filter_audio(void *data, struct obs_audio_data *audio);
 #ifdef __cplusplus
 }
 #endif

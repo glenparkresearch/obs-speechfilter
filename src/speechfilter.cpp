@@ -3,7 +3,7 @@
 // Function to return the name of the filter
 const char *speechfilter_getname(void *unused_data) {
     (void)unused_data;  // Suppress unused parameter warning
-    return "CleanStream Audio Filter";
+    return "SpeechFilter Audio Filter";
 }
 
 // Function called when the filter is created
