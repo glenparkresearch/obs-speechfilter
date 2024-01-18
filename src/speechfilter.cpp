@@ -1,6 +1,5 @@
 #include "speechfilter.h"
 #include "plugin-support.h"
-#include <libobs/obs.h>
 
 // Function to return the name of the filter
 const char *speechfilter_getname(void *unused_data) {
@@ -71,13 +70,4 @@ struct obs_audio_data *speechfilter_filter_audio(void *data, struct obs_audio_da
     obs_log(LOG_INFO, "speechfilter_filter_audio() finished");
     return audio;
 };
-
-
-
-
-
-
-
-
-
 
