@@ -1,6 +1,5 @@
 #include "speechfilter.h"
 #include "plugin-support.h"
-#include <libobs/media-io/audio-io.h>
 #include <libobs/obs.h>
 
 // Function to return the name of the filter
